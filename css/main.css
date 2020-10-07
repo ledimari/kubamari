@@ -43,6 +43,7 @@ body {
   line-height: 38px;
   text-align: center;
   color: #4E5665;
+  font-weight: 400;
 }
 
 /*Styles For Header Start*/
@@ -255,8 +256,93 @@ border-right: none;
 border-left: 2px solid #ECB84C;
 }
 
+.about__preview-title {
+  margin-bottom: 38px;
+}
+
+.about__preview-text {
+  margin: 53px auto 80px;
+}
+
+.about__images-box {
+  padding-top: 73px;
+  position: relative;
+}
+
+.about__dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgba(236, 184, 76, .75);
+  position: absolute;
+  cursor: pointer;
+}
+
+.about__dot-1 {
+  top: 190px;
+  left: 148px;
+}
+
+.about__dot-2 {
+  top: 188px;
+  left: 495px;
+}
+
+.about__dot-3 {
+  top: 147px;
+  right: 374px;
+}
+
+.about__dot-4 {
+  top: 349px;
+  right: 299px;
+}
+
+.about__dot::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 214, 0);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.about__dot::before {
+  content: '';
+  position: absolute;
+  background-image: url(../img/line.svg);
+  width: 244px;
+  height: 122px;
+  top: -113px;
+  left: 25px;
+  opacity: 0;
+  transition: all .15s ease-in-out;
+}
+
+.about__dot-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 28px;
+  color: #505050;
+  top: -140px;
+  left: 150px;
+  white-space: nowrap;
+  position: absolute;
+  opacity: 0;
+  transition: all .15s ease-in-out;
+}
 
 
+.about__dot:hover::before {
+  opacity: 1;
+}
+
+.about__dot:hover .about__dot-text {
+  opacity: 1;
+}
 
 
 
@@ -293,6 +379,7 @@ border-left: 2px solid #ECB84C;
 .photo__slider {
   max-width: 640px;
   margin: 0 auto;
+  filter: drop-shadow(0px 2px 24px rgba(0, 0, 0, 0.3));
 }
 
 .slick-arrow {
@@ -359,6 +446,44 @@ right: -20px;
   line-height: 19px;
   color: #505050;
   margin-bottom: 8px;
+}
+
+
+.footer__item-link--social {
+  padding-left: 28px;
+  position: relative;
+}
+
+.footer__item-link--social::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.footer__item-link--message::before {
+  background-image: url(../img/message.svg);
+  width: 17px;
+  top: 1px;
+}
+
+.footer__item-link--facebook::before {
+  background-image: url(../img/facebook.svg);
+}
+
+.footer__item-link--insta::before {
+  background-image: url(../img/insta.svg);
+}
+
+.footer__item-link--youtube::before {
+  background-image: url(../img/youtube.svg);
+}
+
+.footer__item-link--email::before {
+  background-image: url(../img/email.svg);
+  height: 13px;
+  top: 3px;
 }
 
 .footer__copy {
